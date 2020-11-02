@@ -1,0 +1,52 @@
+State,Time,AllMail
+Indiana,6,false
+Kentucky,6,false
+Alabama,7,false
+Arizona,7,false
+Florida,7,false
+Georgia,7,false
+Hawaii,7,false
+Illinois,7,false
+Kansas,7,false
+Mississippi,7,false
+Missouri,7,false
+Nevada,7,false
+New Hampshire,7,false
+New Mexico,7,false
+Oklahoma,7,false
+South Carolina,7,false
+South Dakota,7,false
+Texas,7,false
+Vermont,7,false
+Virginia,7,false
+Wyoming,7,false
+Tennessee,7,false
+Nebraska,7,false
+Arkansas,7:30,false
+North Carolina,7:30,false
+Ohio,7:30,false
+West Virginia,7:30,false
+Alaska,8,false
+California,8,false
+Connecticut,8,false
+Delaware,8,false
+District of Columbia,8,false
+Idaho,8,false
+Louisiana,8,false
+Maine,8,false
+Maryland,8,false
+Massachusetts,8,false
+Michigan,8,false
+Minnesota,8,false
+Montana,8,false
+New Jersey,8,false
+Pennsylvania,8,false
+Rhode Island,8,false
+Utah,8,false
+Wisconsin,8,false
+Washington,8,false
+Iowa,9,false
+New York,9,false
+North Dakota,9,false
+Colorado,0,true
+Oregon,0,true

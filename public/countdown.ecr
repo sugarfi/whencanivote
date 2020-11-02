@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find out when polls close in your state!">
+        <meta property="og:title" content="When can I vote?"/>
+        <meta property="og:image" content="/ballot.png"/>
+        <title>When can I vote?</title>
+        <link rel="stylesheet" href="/style.css"/>
+        <link rel="icon" href="/ballot.png"/>
+    </head>
+    <body>
+        <img alt="Ballot box" src="/ballot.png"/>
+        <h1 id="time">
+            Loading...
+        </h1>
+        <a href="/">Back</a>
+        <script>
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+
+            let time = "<%= row["Time"] %>";
+            if (!time.includes(":")) {
+                time += ":00"
+            }
+
+            const end = new Date(`2020-11-03 ${time} PM`);
+
+            const countdown = () => {
+                const diff = end - (new Date());
+                if (diff < 0) {
+                    document.getElementById('time').textContent = 'Polls have already closed!';
+                } else {
+                    const days = Math.floor(diff / day);
+                    const hours = Math.floor((diff % day) / hour);
+                    const minutes = Math.floor((diff % hour) / minute);
+                    const seconds = Math.floor((diff % minute) / second);
+
+                    document.getElementById('time').innerHTML = 
+                        `In <%= row["State"] %>, polls close in... 
+                        <div>
+                            <p><span>${days}</span> days</p> 
+                            <p><span>${hours}</span> hours</p>
+                            <p><span>${minutes}</span> minutes</p>
+                            <p><span>${seconds}</span> seconds</p>
+                        </div>`;
+                }
+            };
+
+            countdown();
+            setInterval(countdown, 1000);
+        </script>
+    </body>
+</html>

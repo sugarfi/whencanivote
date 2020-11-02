@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find out when polls close in your state!">
+        <meta property="og:title" content="When can I vote?"/>
+        <meta property="og:image" content="/ballot.png"/>
+        <title>When can I vote?</title>
+        <link rel="stylesheet" href="/style.css"/>
+        <link rel="icon" href="/ballot.png"/>
+    </head>
+    <body>
+        <img alt="Ballot box" src="/ballot.png"/>
+        <form method="POST">
+            <label for="state">Select your state:</label>
+            <select name="state" id="state">
+                <%- states.each do |state| -%>
+                    <option value="<%= state %>"><%= state %></option>
+                <%- end -%>
+            </select>
+            <input type="submit" value="Ok"/>
+        </form>
+    </body>
+</html>
